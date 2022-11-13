@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>2022 도서관박물관 미술관</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="2022 도서관박물관 미술관">
+    <meta property="og:image" content="">
+    <link rel="shortcut icon" href="assets/common/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/common/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <script src="assets/js/libs/swiper-bundle.min.js"></script>
 </head>
 <style>
     body {
@@ -51,6 +52,29 @@
         height: 100%;
         object-fit: cover;
     }
+    :root {
+        --swiper-navigation-color: #ed6d00;
+    }
+    .mySwiper {
+        position: relative;
+    }
+
+    @media (min-width: 37.5em) {
+        .mySwiper  {
+            margin-left: auto;
+            margin-right: auto;
+            width: 93%;
+            /* make room for arrows */
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+    }
+    @media (min-width: 43.75em) {
+        .mySwiper  {
+            width: 96%;
+        }
+    }
+
 </style>
 <body class="antialiased">
 
@@ -77,19 +101,19 @@
             </div>
             <div class = "col-span-6 swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide grayscale rounded-3xl">
+                    <div class="swiper-slide grayscale cursor-pointer" OnClick="location.href ='index.html?space=1'">
                         <img src="main_item_1.png" />
                     </div>
-                    <div class="swiper-slide rounded">
+                    <div class="swiper-slide cursor-pointer" OnClick="location.href ='index.html?space=2'">
                         <img src="main_item_1.png" />
                     </div>
-                    <div class="swiper-slide grayscale rounded">
+                    <div class="swiper-slide grayscale cursor-pointer" OnClick="location.href ='index.html?space=3'">
                         <img src="main_item_1.png" />
                     </div>
-                    <div class="swiper-slide rounded">
+                    <div class="swiper-slide rounded cursor-pointer">
                         <img src="main_item_1.png" />
                     </div>
-                    <div class="swiper-slide rounded grayscale">
+                    <div class="swiper-slide cursor-pointer grayscale">
                         <img src="main_item_1.png" />
                     </div>
                 </div>
@@ -184,11 +208,22 @@
 <script>
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 50,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        breakpoints : {
+            640 : {
+                slidesPerView : 2
+            },
+            1280 : {
+                slidesPerView : 3
+            },
+            1536 : {
+                slidesPerView : 4
+            }
+        }
     });
 </script>
 </html>

@@ -13,9 +13,13 @@ function checkMobile(){
       return "other";
   }
 }
-
 $(document).ready(function(){
-
+    let searchParams = new URLSearchParams(window.location.search)
+    if(searchParams.has("space")) {
+        changePage(searchParams.get("space"));
+    } else {
+        changePage(1);
+    }
   var swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-pagination",
@@ -89,6 +93,7 @@ $(".simpleBtns").on('click', function(e) {
 });
 
 function changePage($idx){
+  $("#loading").show();
   $("body").attr('class', '').addClass("floor"+$idx);
   stopVideo();
   $(".flos").hide();
@@ -98,8 +103,10 @@ function changePage($idx){
   $(".menus > div").removeClass("active");
   $("#page"+$idx).addClass("active");
   $(".wrapper").scrollLeft(0);
+  setTimeout(() => $("#loading").hide(), 2000);
+
 }
-changePage(1);
+// changePage(1);
 
 $(".closeBtns, #slidePop .dimd").on('click', function(e) {
   $("#ytPop").hide();

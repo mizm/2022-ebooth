@@ -9,8 +9,8 @@ a:visited { color:black; font-size: 0.8vh; text-decoration: none;}
 a { transition:transform 0.3s; display: inline-block; background-color: white;}
 a:hover { font-weight: bolder; text-decoration: underline; z-index: 1;}
 
-#loading { position: fixed; top:0; left: 0; width: 100%; height: 110%; z-index: 999; display: none;}
-.dimd { position: absolute; top:0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7);}
+#loading { position: fixed; top:0; left: 0; width: 100%; height: 110%; z-index: 999;}
+.dimd { position: absolute; top:0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 1);}
 #loading > img { width: 80px; height: 80px; position: absolute; top: 40%; left: 50%; margin: -40px 0 0 -40px;}
 .simpleBtns { cursor: pointer;}
 #main_buy { position: fixed; top:-10px; right: 20px; z-index: 5; transition: top 0.8s; display: block; background-color: initial; }
@@ -27,7 +27,7 @@ select {
 #logo { position: fixed; top:20px; left: 20px; z-index: 5; width: 120px;}
 #logo img { width: 100%;}
 
-#footer { position: fixed; bottom: 0; left: 0; z-index: 5; width: 100%; height: 70px; background-color: black;}
+#footer {bottom: 0; left: 0; z-index: 5; width: 100%; height: 70px; background-color: black;}
 #footer > .menus { height: 100%; width: 690px; position: absolute; left: 83px; top:0; }
 .menus > div { width: 80px; height: 70px; background-size: 100% 100%; display: inline-block; cursor: pointer; margin-right: 45px;}/*assets/img/menu1_on.jpg*/
 .menus > div > img { cursor: pointer;}
@@ -40,7 +40,7 @@ select {
 .menus > #page4 { background-image: url('../img/menu4_off.png');}
 .menus > #page4.active { background-image: url('../img/menu4_on.png');}
 
-.wrapper { height: 100%; overflow: hidden; }
+.wrapper { height: calc(100% - 70px); overflow: hidden;}
 .wrapper .bg { height: 100%; display: inline-block; top:0;} 
 .wrapper .bg > img { height: 100%; pointer-events: none; }
 .wrapper .bg > span { position: absolute; top: 82%; left: 0.75%;}
