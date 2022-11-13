@@ -54,6 +54,21 @@ select {
 .floor2 .page2.item-box { display: block; }
 .floor3 .page3.item-box { display: block; }
 .floor4 .page4.item-box { display: block; }
+.floor5 .page5.item-box { display: block; }
+.floor6 .page6.item-box { display: block; }
+.floor7 .page7.item-box { display: block; }
+.floor8 .page8.item-box { display: block; }
+.floor9 .page9.item-box { display: block; }
+.floor10 .page10.item-box { display: block; }
+.floor11 .page11.item-box { display: block; }
+.floor12 .page12.item-box { display: block; }
+.floor13 .page13.item-box { display: block; }
+.floor14 .page14.item-box { display: block; }
+.floor15 .page15.item-box { display: block; }
+.floor16 .page16.item-box { display: block; }
+.floor17 .page17.item-box { display: block; }
+.floor18 .page18.item-box { display: block; }
+.floor19 .page19.item-box { display: block; }
 
 .item-box { position: absolute; display: none; cursor: pointer;}
 .item-box.none { cursor: initial; }
@@ -71,6 +86,7 @@ select {
 .item-box.bt1 span { bottom: inherit; top: 10%; right: -13vh;}
 .item-box.bt2 span { bottom: inherit; top: 10%; right: -21vh;}
 .item-box.bt3 span { bottom: inherit; top: 10%; right: -14.5vh;}
+.item-box.under span {top: 100%; margin-top: 5vh;}
 .item-box span p { font-size: 1.28vh; font-weight: 400;}
 .item-box span p.fir { font-size: 1.4vh; font-weight: 700; margin-bottom: 0.5vh; }
 

@@ -124,13 +124,14 @@ $(".closeBtns, #slidePop .dimd").on('click', function(e) {
 //   showTextPopup(idx);
 // });
 
-$(".page1,.page2,.page3,.page4").on("click", function(){
+$(".page1,.page2,.page3,.page4,.page18").on("click", function(){
   if( $(this).hasClass("yt")){
     ytPopHandler( $(this) );
     return;
   } else if( $(this).hasClass("none") ){
     return;
   } else if ( $(this).hasClass("pdf") ) {
+      console.log($(this).attr("pdf"));
     var redirectWindow = window.open($(this).attr("pdf"), '_blank');
     redirectWindow.location;
     return;
