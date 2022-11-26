@@ -124,7 +124,10 @@ $(".closeBtns, #slidePop .dimd").on('click', function(e) {
 //   showTextPopup(idx);
 // });
 
-$(".page1,.page2,.page3,.page4,.page18").on("click", function(){
+
+var pages = Array(19).fill().map((v,i)=>".page"+(i+1).toString());
+//$(".page1,.page2,.page3...,.page19)
+$(String(pages)).on("click", function(){
   if( $(this).hasClass("yt")){
     ytPopHandler( $(this) );
     return;
@@ -157,7 +160,7 @@ function showTextPopup($idx){
 }
 
 function popupInit(){
-  $("#slidePop").show(350);
+  $("#slidePop").show();
   // $("#slidePop > .popup_wrapper > .swiper-wrapper").html("");
   
   // $("#slidePop .popup_wrapper .nav").html("");

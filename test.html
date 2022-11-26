@@ -44,6 +44,7 @@
         align-items: center;
     }
     .content {
+        /*background-image: ;*/
         background-color: #f6fbfb;
     }
     .swiper-slide img {
@@ -77,8 +78,8 @@
 
 </style>
 <body class="antialiased">
-
-    <div class ="content max-w-full rounded-3xl px-auto mx-10 sm:mx-18 md:mx-24 lg:mx-36 xl:mx-48 2xl:mx-64 my-8 py-8">
+<!--sm:mx-18 md:mx-24 lg:mx-36 xl:mx-48 2xl:mx-64 4xl:mx-72 6xl:mx-96 8xl:mx-128-->
+    <div class ="content max-w-7xl rounded-3xl px-auto mx-auto my-8 py-8">
 
         <div class="grid grid-cols-8 justify-items-center content-center">
             <div class ="self-center col-start-2 col-span-3">
@@ -225,5 +226,30 @@
             }
         }
     });
+    tailwind.config = {
+        theme: {
+            screens: {
+                'xl': {'max': '1279px'},
+                // => @media (max-width: 1279px) { ... }
+
+                'lg': {'max': '1023px'},
+                // => @media (max-width: 1023px) { ... }
+
+                'md': {'max': '767px'},
+                // => @media (max-width: 767px) { ... }
+
+                'sm': {'max': '639px'},
+                // => @media (max-width: 639px) { ... }
+                '2xl': {'max': '1280px'},
+                '4xl': {'min': '1536px', 'max': '2099px'},
+                '6xl': {'min': '2100px', 'max': '2399px'},
+                '8xl': {'min': '2400px'},
+            },
+            // spacing : {
+            //     '128': '32rem',
+            //     '144': '36rem',
+            // }
+        }
+    }
 </script>
 </html>
