@@ -15,7 +15,8 @@
 </head>
 <style>
     body {
-        background-color: #d6edec;
+        /*background-color: #d6edec;*/
+        background-color: white;
     }
     .header {
         background-image: url('assets/img/main.png');
@@ -45,7 +46,7 @@
     }
     .content {
         /*background-image: ;*/
-        background-color: #f6fbfb;
+        background-color: white;
     }
     .swiper-slide img {
         display: block;
@@ -53,203 +54,239 @@
         height: 100%;
         object-fit: cover;
     }
+    .swiper-slide .open {
+        width: 25%;
+        height: auto;
+    }
     :root {
-        --swiper-navigation-color: #ed6d00;
+        --swiper-navigation-color: #ec6e82;
+        --swiper-navigation-size: 50px;
     }
     .mySwiper {
-        position: relative;
+        width:calc(100% - 120px);
     }
 
-    @media (min-width: 37.5em) {
-        .mySwiper  {
-            margin-left: auto;
-            margin-right: auto;
-            width: 93%;
-            /* make room for arrows */
-            padding-left: 3em;
-            padding-right: 3em;
-        }
-    }
-    @media (min-width: 43.75em) {
-        .mySwiper  {
-            width: 96%;
-        }
-    }
+    /*@media (min-width: 37.5em) {*/
+    /*    .mySwiper  {*/
+    /*        margin-left: auto;*/
+    /*        margin-right: auto;*/
+    /*        !*width: 90%;*!*/
+    /*        !* make room for arrows *!*/
+    /*        padding-left: 40px;*/
+    /*        padding-right: 40px;*/
+    /*    }*/
+    /*}*/
+    /*@media (min-width: 43.75em) {*/
+    /*    .mySwiper  {*/
+    /*        width: 96%;*/
+    /*    }*/
+    /*}*/
 
 </style>
 <body class="antialiased">
 <!--sm:mx-18 md:mx-24 lg:mx-36 xl:mx-48 2xl:mx-64 4xl:mx-72 6xl:mx-96 8xl:mx-128-->
-    <div class ="content max-w-7xl rounded-3xl px-auto mx-auto my-8 py-8">
-
-        <div class="grid grid-cols-8 justify-items-center content-center">
-            <div class ="self-center col-start-2 col-span-3">
-                <img src="assets/img/main_cpnt_1.png"/>
-            </div>
-            <div class ="self-center justify-self-start col-span-3">
-                <img src="assets/img/main_cpnt_2.png"/>
+    <img src="assets/img/main_component/header.png" class="max-w-full mx-auto">
+    <div class ="content max-w-screen-2xl rounded-3xl px-auto mx-auto pb-8">
+        <div class="grid grid-cols-4 justify-items-center content-center py-20 px-5">
+            <div class="col-start-2 col-span-2">
+                <img src="assets/img/main_component/component1.png"/>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 justify-items-center content-center my-28">
-            <div>
-                <img src="main_top_2.png"/>
+        <div class="grid grid-cols-6 justify-items-center content-center py-4 bg-white px-5">
+            <div class="col-start-3 col-span-2">
+                <img src="assets/img/main_component/1_title.png"/>
             </div>
         </div>
 
-        <div class="grid grid-cols-8 col-gap-6 space-x-4 justify-items-center content-center items-center my-28 mx-auto px-4 sm:px-6 md:px-8">
-            <div class="col-span-2">
-                <img class = "w-4/6" src="main_category_1.png"/>
-            </div>
-            <div class = "col-span-6 swiper mySwiper">
+<!--        <div class="grid grid-cols-8 col-gap-6 space-x-4 bg-white justify-items-center content-center items-center mx-auto py-4 px-4 sm:px-6 md:px-8">-->
+        <div class = "py-4" style="position:relative">
+            <div class = "swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide grayscale cursor-pointer" OnClick="location.href ='index.html?space=1'">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/1_1.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
-                    <div class="swiper-slide cursor-pointer" OnClick="location.href ='index.html?space=2'">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/1_2.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
-                    <div class="swiper-slide grayscale cursor-pointer" OnClick="location.href ='index.html?space=3'">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/1_3.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
-                    <div class="swiper-slide rounded cursor-pointer">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/1_4.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
-                    <div class="swiper-slide cursor-pointer grayscale">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/1_5.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
+                    </div>
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/1_6.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="swiper-button-next font-black"></div>
+            <div class="swiper-button-prev font-black"></div>
+         </div>
+
+        <div class="grid grid-cols-6 justify-items-center content-center py-4 bg-white px-5 pt-16">
+            <div class="col-start-3 col-span-2">
+                <img src="assets/img/main_component/2_title.png"/>
             </div>
         </div>
 
-        <div class="grid grid-cols-8 col-gap-6 space-x-4 justify-items-center content-center items-center my-28 mx-auto px-4 sm:px-6 md:px-8">
-            <div class="col-span-2">
-                <img class = "w-4/6" src="main_category_1.png"/>
-            </div>
-            <div class = "col-span-6 swiper mySwiper">
+        <!--        <div class="grid grid-cols-8 col-gap-6 space-x-4 bg-white justify-items-center content-center items-center mx-auto py-4 px-4 sm:px-6 md:px-8">-->
+        <div class = "py-4" style="position:relative">
+            <div class = "swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide grayscale rounded-3xl">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/2_1.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
-                    <div class="swiper-slide rounded">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/2_2.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
-                    <div class="swiper-slide grayscale rounded">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/2_3.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
-                    <div class="swiper-slide rounded">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/2_4.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
-                    <div class="swiper-slide rounded grayscale">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/2_5.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="swiper-button-next font-black"></div>
+            <div class="swiper-button-prev font-black"></div>
+        </div>
+
+        <div class="grid grid-cols-6 justify-items-center content-center py-4 bg-white px-5  pt-16">
+            <div class="col-start-3 col-span-2">
+                <img src="assets/img/main_component/1_title.png"/>
             </div>
         </div>
 
-        <div class="grid grid-cols-8 col-gap-6 space-x-4 justify-items-center content-center items-center my-28 mx-auto px-4 sm:px-6 md:px-8">
-            <div class="col-span-2">
-                <img class = "w-4/6" src="main_category_1.png"/>
-            </div>
-            <div class = "col-span-6 swiper mySwiper">
+        <!--        <div class="grid grid-cols-8 col-gap-6 space-x-4 bg-white justify-items-center content-center items-center mx-auto py-4 px-4 sm:px-6 md:px-8">-->
+        <div class = "py-4" style="position:relative">
+            <div class = "swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide grayscale rounded-3xl">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/3_1.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
-                    <div class="swiper-slide rounded">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/3_2.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
-                    <div class="swiper-slide grayscale rounded">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/3_3.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
-                    <div class="swiper-slide rounded">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/3_4.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
-                    <div class="swiper-slide rounded grayscale">
-                        <img src="main_item_1.png" />
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/3_5.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
+                    </div>
+                    <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='index.html?space=1'">
+                        <img src="assets/img/main_component/3_6.png" class="group-hover/item:brightness-75" />
+                        <img src="assets/img/main_component/open_icon.png" class="open group-hover/item:visible duration-100 transform group-hover/item:scale-125 transition ease-linear collapse absolute brightness-100 mt-10">
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
+            <div class="swiper-button-next font-black"></div>
+            <div class="swiper-button-prev font-black"></div>
         </div>
+    </div>
 
-        <div class="grid grid-cols-8 col-gap-6 space-x-4 justify-items-center content-center items-center my-28 mx-auto px-4 sm:px-6 md:px-8">
-            <div class="col-span-2">
-                <img class = "w-4/6" src="main_category_1.png"/>
-            </div>
-            <div class = "col-span-6 swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide grayscale rounded-3xl">
-                        <img src="main_item_1.png" />
-                    </div>
-                    <div class="swiper-slide rounded">
-                        <img src="main_item_1.png" />
-                    </div>
-                    <div class="swiper-slide grayscale rounded">
-                        <img src="main_item_1.png" />
-                    </div>
-                    <div class="swiper-slide rounded">
-                        <img src="main_item_1.png" />
-                    </div>
-                    <div class="swiper-slide rounded grayscale">
-                        <img src="main_item_1.png" />
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-
+    <div class="flex justify-center my-5">
+            <img style="width:450px"  src="assets/img/main_component/footer_logo.png">
+    </div>
+<!--        <div class="grid grid-cols-8 col-gap-6 space-x-4 bg-white justify-items-center content-center items-center my-28 mx-auto px-4 sm:px-6 md:px-8">-->
+<!--            <div class="col-span-2">-->
+<!--                <img class = "w-4/6" src="main_category_1.png"/>-->
+<!--            </div>-->
+<!--            <div class = "col-span-6 swiper mySwiper">-->
+<!--                <div class="swiper-wrapper">-->
+<!--                    <div class="swiper-slide grayscale rounded-3xl">-->
+<!--                        <img src="main_item_1.png" />-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide rounded">-->
+<!--                        <img src="main_item_1.png" />-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide grayscale rounded">-->
+<!--                        <img src="main_item_1.png" />-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide rounded">-->
+<!--                        <img src="main_item_1.png" />-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide rounded grayscale">-->
+<!--                        <img src="main_item_1.png" />-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="swiper-button-next"></div>-->
+<!--                <div class="swiper-button-prev"></div>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </body>
 <script>
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 50,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints : {
-            640 : {
-                slidesPerView : 2
+    document.querySelectorAll('.mySwiper').forEach(function(elem) {
+        new Swiper(elem, {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: elem.nextElementSibling,
+                prevEl: elem.nextElementSibling.nextElementSibling
             },
-            1280 : {
-                slidesPerView : 3
-            },
-            1536 : {
-                slidesPerView : 4
+            breakpoints : {
+                640 : {
+                    slidesPerView : 2
+                },
+                1280 : {
+                    slidesPerView : 3
+                },
+                1536 : {
+                    slidesPerView : 4
+                }
             }
-        }
+         });
     });
-    tailwind.config = {
-        theme: {
-            screens: {
-                'xl': {'max': '1279px'},
-                // => @media (max-width: 1279px) { ... }
-
-                'lg': {'max': '1023px'},
-                // => @media (max-width: 1023px) { ... }
-
-                'md': {'max': '767px'},
-                // => @media (max-width: 767px) { ... }
-
-                'sm': {'max': '639px'},
-                // => @media (max-width: 639px) { ... }
-                '2xl': {'max': '1280px'},
-                '4xl': {'min': '1536px', 'max': '2099px'},
-                '6xl': {'min': '2100px', 'max': '2399px'},
-                '8xl': {'min': '2400px'},
-            },
-            // spacing : {
-            //     '128': '32rem',
-            //     '144': '36rem',
-            // }
-        }
-    }
+    // tailwind.config = {
+    //     theme: {
+    //         screens: {
+    //             'xl': {'max': '1279px'},
+    //             // => @media (max-width: 1279px) { ... }
+    //
+    //             'lg': {'max': '1023px'},
+    //             // => @media (max-width: 1023px) { ... }
+    //
+    //             'md': {'max': '767px'},
+    //             // => @media (max-width: 767px) { ... }
+    //
+    //             'sm': {'max': '639px'},
+    //             // => @media (max-width: 639px) { ... }
+    //             '2xl': {'max': '1280px'},
+    //             '4xl': {'min': '1536px', 'max': '2099px'},
+    //             '6xl': {'min': '2100px', 'max': '2399px'},
+    //             '8xl': {'min': '2400px'},
+    //         },
+    //         // spacing : {
+    //         //     '128': '32rem',
+    //         //     '144': '36rem',
+    //         // }
+    //     }
+    // }
 </script>
 </html>
