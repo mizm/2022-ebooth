@@ -98,15 +98,15 @@ function changePage($idx){
     stopVideo();
     $(".flos").hide();
 
+    $(".scroll-nav-jog").css("left","0");
+    $(".menus > div").removeClass("active");
+    // $("#page"+$idx).addClass("active");
+    $(".wrapper").scrollLeft(0);
     $(".flo"+$idx).show("fast", function complete() {
         var end_width = Math.round(((950 * ($(".flo"+$idx).height()/1230)) / $(".flo"+$idx).width() * 10000) / 100);
         $(".end-menu").width(end_width + '%');
-        setTimeout(() => $("#loading").hide(), 500);
+        setTimeout(() => $("#loading").hide(), 1000);
     });
-    $(".scroll-nav-jog").css("left","0");
-    $(".menus > div").removeClass("active");
-    $("#page"+$idx).addClass("active");
-    $(".wrapper").scrollLeft(0);
     // var end_width = Math.round(((950 * ($(".flo"+$idx).height()/1230)) / $(".flo"+$idx).width() * 10000) / 100);
     // $(".end-menu").width(end_width + '%');
   // end menu width 계산
