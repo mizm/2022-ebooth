@@ -175,20 +175,48 @@ html .player .vp-controls { z-index: 10;}
 .scroll-nav-line { width: 100%; height: 2px; background-color: #615f5d; top:19px; left:10px; }
 .scroll-nav-jog { width: 20px; height: 20px; margin: 10px; background-color: white; border-radius: 15px; top:0; left: 0; position: absolute; cursor: pointer;}
 
-.end-menu { height:100%; width:2.02%; right: 2.37%; position: absolute; top:0; display: block;}
-.floor2 .end-menu { right: 3.12%; width:2.67%; }
-.floor3 .end-menu { right: 3.1%; width:2.69%; }
-.floor4 .end-menu { right: 3.84%; width: 2.44%; }
+.end-menu { height:100%; right: 0px; position: absolute; top:0; display: block;}
 /* 
 .end-menu > img { height: 100%; display: block;} */
-.end-menu .end-menus { display: block; background-color: inherit; position: absolute; top:0; width: 100%; height: 15%;}
-.end-menu .end-menus#emb1 { top:14%;}
-.end-menu .end-menus#emb2 { top:31%;}
-.end-menu .end-menus#emb3 { top:43%;}
-.end-menu .end-menus#emb4 { top:58%;}
-.end-menu .end-menus .over { display: none; opacity: 0; transition: opacity 0.8s; width: 68%; position: absolute; left: 13%; bottom: 0; }
-.end-menu .end-menus:hover .over { display: block; opacity: 1; }
-.end-menu .end-menus:hover .out { display: none; }
+.end-menu .end-menus { display: block; left:25%; background-color: inherit; position: absolute; top:0; width: 50%; height: 3%;}
+.end-menus h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #ec6e82;
+    opacity: 0;
+    transition: opacity 500ms, transform 500ms;
+}
+
+.end-menus:hover h2:hover::after,
+.end-menus h2:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+
+/* Slide in */
+.end-menus h2 {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.end-menus h2::after {
+    opacity : 1;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.end-menus:hover h2::after,
+.end-menus h2:focus::after{
+    transform: translate3d(0, 0, 0);
+}
+.end-menu .end-menus h2 {font-size: 2vh;}
+.end-menu .end-menus p {font-size: 1.5vh;}
+.end-menu .end-menus#emb1 { top:26.5%; }
+.end-menu .end-menus#emb2 { top:42.5%;}
+.end-menu .end-menus#emb3 { top:60.5%;}
 
 #buyBtn { top:0; position: absolute; left: 36.5%; width: 4.8%; height: 8.5%; cursor: pointer;}
 
