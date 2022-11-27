@@ -105,7 +105,7 @@ function changePage($idx){
   $(".wrapper").scrollLeft(0);
 
   // end menu width 계산
-    var end_width = Math.round(950 / $(".bg").width() * 10000) / 100;
+    var end_width = Math.round(((950 * ($(".bg").height()/1230)) / $(".bg").width() * 10000) / 100);
     $(".end-menu").width(end_width + '%');
   setTimeout(() => $("#loading").hide(), 2000);
 
