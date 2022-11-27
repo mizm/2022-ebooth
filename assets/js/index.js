@@ -93,22 +93,22 @@ $(".simpleBtns").on('click', function(e) {
 });
 
 function changePage($idx){
-  $("#loading").show();
-  $("body").attr('class', '').addClass("floor"+$idx);
-  stopVideo();
-  $(".flos").hide();
+    $("#loading").show();
+    $("body").attr('class', '').addClass("floor"+$idx);
+    stopVideo();
+    $(".flos").hide();
 
-  $(".flo"+$idx).show();
-  $(".scroll-nav-jog").css("left","0");
-  $(".menus > div").removeClass("active");
-  $("#page"+$idx).addClass("active");
-  $(".wrapper").scrollLeft(0);
+    $(".flo"+$idx).show();
+    $(".scroll-nav-jog").css("left","0");
+    $(".menus > div").removeClass("active");
+    $("#page"+$idx).addClass("active");
+    $(".wrapper").scrollLeft(0);
 
   // end menu width 계산
     var end_width = Math.round(((950 * ($(".bg").height()/1230)) / $(".bg").width() * 10000) / 100);
     $(".end-menu").width(end_width + '%');
-  setTimeout(() => $("#loading").hide(), 2000);
-
+    console.log(end_width);
+    setTimeout(() => $("#loading").hide(), 2000);
 }
 // changePage(1);
 
