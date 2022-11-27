@@ -16,7 +16,7 @@
 <style>
     body {
         /*background-color: #d6edec;*/
-        background-color: white;
+        background-color: #bcd6cf;
     }
     .header {
         background-image: url('assets/img/main.png');
@@ -66,6 +66,13 @@
         width:calc(100% - 120px);
     }
 
+    p {
+        font-size : 20px;
+    }
+
+    #content1, #content2, #content3 {
+        padding-left : 60px;
+    }
     /*@media (min-width: 37.5em) {*/
     /*    .mySwiper  {*/
     /*        margin-left: auto;*/
@@ -86,20 +93,29 @@
 <body class="antialiased">
 <!--sm:mx-18 md:mx-24 lg:mx-36 xl:mx-48 2xl:mx-64 4xl:mx-72 6xl:mx-96 8xl:mx-128-->
     <img src="assets/img/main_component/header.png" class="max-w-full mx-auto">
-    <div class ="content max-w-screen-2xl rounded-3xl px-auto mx-auto pb-8">
+    <div class ="content max-w-screen-2xl px-auto mx-auto">
+
+        <div class="grid grid-cols-4 justify-items-center content-center py-2 sm:py-4 md:py-8 lg:py-12 xl:py-20 px-5">
+            <div class="col-start-2 justify-items-center content-center col-span-2">
+                <img class="my-8 mx-auto" src="assets/img/main_component/header_content_1.png"/>
+                <img class="my-8 mx-auto" src="assets/img/main_component/header_content_2.png"/>
+                <img class="my-8 mx-auto" src="assets/img/main_component/header_content_3.png"/>
+            </div>
+        </div>
+
         <div class="grid grid-cols-4 justify-items-center content-center py-2 sm:py-4 md:py-8 lg:py-12 xl:py-20 px-5">
             <div class="col-start-2 col-span-2">
                 <img src="assets/img/main_component/component1.png"/>
             </div>
         </div>
 
-        <div id="content1" class="grid grid-cols-6 justify-items-center content-center py-2 md:py-4 lg:py-6 bg-white px-5">
-            <div class="col-start-3 col-span-2">
+        <div id="content1" class="grid grid-cols-8 justify-items-start mx-24 content-center my-2 md:my-4 bg-white px-5">
+            <div class="col-span-3 w-10/12">
                 <img src="assets/img/main_component/1_title.png"/>
             </div>
         </div>
 <!--        <div class="grid grid-cols-8 col-gap-6 space-x-4 bg-white justify-items-center content-center items-center mx-auto py-4 px-4 sm:px-6 md:px-8">-->
-        <div style="position:relative">
+        <div class="mx-24 sm:mb-4 md:mb-16" style="position:relative">
             <div class = "swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='exhibition.html?space=2'">
@@ -138,14 +154,14 @@
             <div class="swiper-button-prev font-black"></div>
          </div>
 
-        <div id="content2" class="grid grid-cols-6 justify-items-center content-center py-2 bg-white px-5 sm:pt-4 md:pt-6 lg:pt-8 xl:pt-16 sm:py-2 md:py-4 lg:py-6">
-            <div class="col-start-3 col-span-2">
+        <div id="content2" class="grid grid-cols-8 justify-items-start mx-24 content-center my-2 md:my-4 bg-white px-5">
+            <div class="col-span-3 w-10/12">
                 <img src="assets/img/main_component/2_title.png"/>
             </div>
         </div>
 
         <!--        <div class="grid grid-cols-8 col-gap-6 space-x-4 bg-white justify-items-center content-center items-center mx-auto py-4 px-4 sm:px-6 md:px-8">-->
-        <div  style="position:relative">
+        <div class="mx-24 sm:mb-4 md:mb-16" style="position:relative">
             <div class = "swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='exhibition.html?space=1'">
@@ -179,14 +195,14 @@
             <div class="swiper-button-prev font-black"></div>
         </div>
 
-        <div id="content3" class="grid grid-cols-6 justify-items-center content-center py-2 bg-white px-5 sm:pt-4 md:pt-6 lg:pt-8 xl:pt-16 sm:py-2 md:py-4 lg:py-6">
-            <div class="col-start-3 col-span-2">
+        <div id="content3" class="grid grid-cols-8 justify-items-start mx-24 content-center my-2 md:my-4 bg-white px-5">
+            <div class="col-span-3 w-10/12">
                 <img src="assets/img/main_component/1_title.png"/>
             </div>
         </div>
 
         <!--        <div class="grid grid-cols-8 col-gap-6 space-x-4 bg-white justify-items-center content-center items-center mx-auto py-4 px-4 sm:px-6 md:px-8">-->
-        <div style="position:relative">
+        <div class="mx-24 mb-4" style="position:relative">
             <div class = "swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide cursor-pointer group/item relative" OnClick="location.href ='exhibition.html?space=7'">
@@ -224,8 +240,12 @@
             <div class="swiper-button-next font-black"></div>
             <div class="swiper-button-prev font-black"></div>
         </div>
+        <div class="h-96">
+        </div>
     </div>
-    <img src="assets/img/main_component/footer.png" class="max-w-full mx-auto pt-32">
+<div class="relative bg-white">
+    <img src="assets/img/main_component/footer.png" class="max-w-full mx-auto absolute -top-56">
+</div>
 
 <!--    <div class="flex justify-center my-5">-->
 <!--            <img style="width:450px"  src="assets/img/main_component/footer_logo.png">-->

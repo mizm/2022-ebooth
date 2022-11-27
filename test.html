@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>2022 도서관박물관 미술관</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="2022 도서관박물관 미술관">
+    <meta property="og:image" content="">
+    <link rel="shortcut icon" href="assets/common/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/common/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <script src="assets/js/libs/swiper-bundle.min.js"></script>
+</head>
+<style>
+    body {
+        /*background-color: #d6edec;*/
+        background-color: #bcd6cf;
+    }
+    .header {
+        background-image: url('assets/img/main.png');
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .content {
+        /*background-image: ;*/
+        background-color: white;
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .swiper-slide .open {
+        width: 25%;
+        height: auto;
+    }
+    :root {
+        --swiper-navigation-color: #ec6e82;
+        --swiper-navigation-size: 50px;
+    }
+    .mySwiper {
+        width:calc(100% - 120px);
+    }
+
+    /*@media (min-width: 37.5em) {*/
+    /*    .mySwiper  {*/
+    /*        margin-left: auto;*/
+    /*        margin-right: auto;*/
+    /*        !*width: 90%;*!*/
+    /*        !* make room for arrows *!*/
+    /*        padding-left: 40px;*/
+    /*        padding-right: 40px;*/
+    /*    }*/
+    /*}*/
+    /*@media (min-width: 43.75em) {*/
+    /*    .mySwiper  {*/
+    /*        width: 96%;*/
+    /*    }*/
+    /*}*/
+
+</style>
+<body class="antialiased">
+<!--sm:mx-18 md:mx-24 lg:mx-36 xl:mx-48 2xl:mx-64 4xl:mx-72 6xl:mx-96 8xl:mx-128-->
+    <img src="sangdan.png" class="max-w-full">
+
+    <img src="inner.png" class="justify-center mx-auto max-w-screen-xl	">
+    <img src="hadan.png" class="max-w-full">
+</body>
+<script>
+    document.querySelectorAll('.mySwiper').forEach(function(elem) {
+        new Swiper(elem, {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: elem.nextElementSibling,
+                prevEl: elem.nextElementSibling.nextElementSibling
+            },
+            breakpoints : {
+                640 : {
+                    slidesPerView : 2
+                },
+                1280 : {
+                    slidesPerView : 3
+                },
+                1536 : {
+                    slidesPerView : 4
+                }
+            }
+         });
+    });
+    // tailwind.config = {
+    //     theme: {
+    //         screens: {
+    //             'xl': {'max': '1279px'},
+    //             // => @media (max-width: 1279px) { ... }
+    //
+    //             'lg': {'max': '1023px'},
+    //             // => @media (max-width: 1023px) { ... }
+    //
+    //             'md': {'max': '767px'},
+    //             // => @media (max-width: 767px) { ... }
+    //
+    //             'sm': {'max': '639px'},
+    //             // => @media (max-width: 639px) { ... }
+    //             '2xl': {'max': '1280px'},
+    //             '4xl': {'min': '1536px', 'max': '2099px'},
+    //             '6xl': {'min': '2100px', 'max': '2399px'},
+    //             '8xl': {'min': '2400px'},
+    //         },
+    //         // spacing : {
+    //         //     '128': '32rem',
+    //         //     '144': '36rem',
+    //         // }
+    //     }
+    // }
+</script>
+</html>
