@@ -104,12 +104,18 @@ function changePage($idx){
     $("#page"+$idx).addClass("active");
     $(".wrapper").scrollLeft(0);
 
+    var end_width = Infinity;
+    while(end_width == Infinity) {
+        var end_width = Math.round(((950 * ($(".flo"+$idx).height()/1230)) / $(".flo"+$idx).width() * 10000) / 100);
+        console.log(end_width);
+        if(end_width != Infinity){
+            $(".end-menu").width(end_width + '%');
+        }
+    }
   // end menu width 계산
-    setTimeout(() => $("#loading").hide(), 2000);
-    var end_width = Math.round(((950 * ($(".flo"+$idx).height()/1230)) / $(".flo"+$idx).width() * 10000) / 100);
-    $(".end-menu").width(end_width + '%');
-    console.log(end_width);
-    console.log($(".flo1").width());
+    setTimeout(() => $("#loading").hide(), 500);
+    // $(".end-menu").width(end_width + '%');
+    // console.log(end_width);
 }
 // changePage(1);
 
