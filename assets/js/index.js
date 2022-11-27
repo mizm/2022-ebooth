@@ -101,6 +101,7 @@ function changePage($idx){
     $(".flo"+$idx).show("fast", function complete() {
         var end_width = Math.round(((950 * ($(".flo"+$idx).height()/1230)) / $(".flo"+$idx).width() * 10000) / 100);
         $(".end-menu").width(end_width + '%');
+        setTimeout(() => $("#loading").hide(), 500);
     });
     $(".scroll-nav-jog").css("left","0");
     $(".menus > div").removeClass("active");
@@ -109,7 +110,7 @@ function changePage($idx){
     // var end_width = Math.round(((950 * ($(".flo"+$idx).height()/1230)) / $(".flo"+$idx).width() * 10000) / 100);
     // $(".end-menu").width(end_width + '%');
   // end menu width 계산
-    setTimeout(() => $("#loading").hide(), 500);
+
     // $(".end-menu").width(end_width + '%');
     // console.log(end_width);
 }
