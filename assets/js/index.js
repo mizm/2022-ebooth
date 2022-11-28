@@ -97,22 +97,20 @@ function changePage($idx){
     $("body").attr('class', '').addClass("floor"+$idx);
     stopVideo();
     $(".flos").hide();
-
+    $(".flo"+$idx).show();
     $(".scroll-nav-jog").css("left","0");
     $(".menus > div").removeClass("active");
     // $("#page"+$idx).addClass("active");
     $(".wrapper").scrollLeft(0);
-    $(".flo"+$idx).show("fast", function complete() {
-        var end_width = Math.round(((950 * ($(".flo"+$idx).height()/1230)) / $(".flo"+$idx).width() * 10000) / 100);
-        $(".end-menu").width(end_width + '%');
-        setTimeout(() => $("#loading").hide(), 1000);
-    });
-    // var end_width = Math.round(((950 * ($(".flo"+$idx).height()/1230)) / $(".flo"+$idx).width() * 10000) / 100);
-    // $(".end-menu").width(end_width + '%');
-  // end menu width 계산
+    // for(var i = 1; i <= 19; i++) {
+    //     var end_width = Math.round(((950 * ($(".flo"+i).height()/1230)) / $(".flo"+i).width()) * 10000) / 100;
+    //     console.log(i  + " : " + end_width);
+    // }
 
-    // $(".end-menu").width(end_width + '%');
-    // console.log(end_width);
+    $(".end-menu").width($(".flo"+$idx).attr("endWidth") + '%');
+
+
+    setTimeout(() => $("#loading").hide(), 1000);
 }
 // changePage(1);
 
