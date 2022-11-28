@@ -102,11 +102,7 @@ function changePage($idx){
     $(".menus > div").removeClass("active");
     // $("#page"+$idx).addClass("active");
     $(".wrapper").scrollLeft(0);
-    // for(var i = 1; i <= 19; i++) {
-    //     var end_width = Math.round(((950 * ($(".flo"+i).height()/1230)) / $(".flo"+i).width()) * 10000) / 100;
-    //     console.log(i  + " : " + end_width);
-    // }
-
+    
     $(".end-menu").width($(".flo"+$idx).attr("endWidth") + '%');
 
 
