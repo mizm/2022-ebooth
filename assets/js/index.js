@@ -186,7 +186,9 @@ function showArtPopup($this){
   var imageSize = $($this).attr("imageSize");
   $("#imageInformation > #imageDirector").text(product + ": " + director);
   $("#imageInformation > #imageTitle").text("작품명: " + title);
-  $("#imageInformation > #imageSize").text("사이즈: " + imageSize);
+  if(imageSize != "") {
+      $("#imageInformation > #imageSize").text("사이즈: " + imageSize);
+  }
   popupInit();
   arrMax = len-1;
   // swiperInit();
