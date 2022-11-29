@@ -28,7 +28,7 @@ select {
 #logo img { width: 100%;}
 
 #footer {bottom: 0; left: 0; z-index: 5; width: 100%; height: 70px; background-color: black;}
-#footer > .menus { height: 100%; width: 690px; position: absolute; left: 83px; top:0; }
+#footer > .menus { height: 100%; width: 690px; position: absolute; top:0; }
 .menus > div { width: 80px; height: 70px; background-size: 100% 100%; display: inline-block; cursor: pointer; margin-right: 45px;}/*assets/img/menu1_on.jpg*/
 .menus > div > img { cursor: pointer;}
 .menus > #page1 { background-image: url('../img/menu1_off.png');}
