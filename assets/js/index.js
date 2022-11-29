@@ -75,22 +75,15 @@ $(".items").each(function(idx,dom){
 $(".simpleBtns").on('click', function(e) {
     var tId = this.id;
     switch(tId) {
-        case "emb1": location.href="index.html#content1"; break;
-        case "page1" : changePage(1); break;
-        case "emb2": location.href="index.html#content2"; break;
-        case "page2" : changePage(2); break;
-        case "emb3": location.href="index.html#content3"; break;
-        case "page3" : changePage(3); break;
-        case "emb4":
-        case "page4" : changePage(4); break;
-        case "buyBtn" :
-        case "main_buy" :
-        case "buy" : window.open("https://smartstore.naver.com/deepartgallery", '_blank'); break;
-
         case "popContentsLeft" : popArrHandler(true); break;
         case "popContentsRigth" : popArrHandler(false); break;
     }
 });
+
+$(".end-menu-btns").on('click', function(e) {
+    location.href= "exhibition.html?space=" + $(this).attr("space");
+});
+
 
 function changePage($idx){
     $("#loading").show();
@@ -102,17 +95,13 @@ function changePage($idx){
     $(".menus > div").removeClass("active");
     // $("#page"+$idx).addClass("active");
     $(".wrapper").scrollLeft(0);
-    
+
     $(".end-menu").width($(".flo"+$idx).attr("endWidth") + '%');
 
 
     setTimeout(() => $("#loading").hide(), 1000);
 }
 // changePage(1);
-
-$(".bg").on('load', function(e) {
-    console.log("hi");
-})
 
 $(".closeBtns, #slidePop .dimd").on('click', function(e) {
   $("#ytPop").hide();

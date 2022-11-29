@@ -179,7 +179,7 @@ html .player .vp-controls { z-index: 10;}
 /* 
 .end-menu > img { height: 100%; display: block;} */
 .end-menu .end-menus { display: block; left:25%; background-color: inherit; position: absolute; top:0; width: 50%; height: 3%;}
-.end-menus h2::after {
+.end-menus p::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -191,32 +191,34 @@ html .player .vp-controls { z-index: 10;}
     transition: opacity 500ms, transform 500ms;
 }
 
-.end-menus:hover h2:hover::after,
-.end-menus h2:focus::after {
+.end-menus p:hover::after,
+.end-menus p:focus::after {
     opacity: 1;
     transform: translate3d(0, 0.2em, 0);
 }
 
 /* Slide in */
-.end-menus h2 {
-    display: inline-block;
+.end-menus p {
+    cursor: pointer;
+    clear:both;
+    float:left;
     overflow: hidden;
 }
 
-.end-menus h2::after {
+.end-menus p::after {
     opacity : 1;
     transform: translate3d(-100%, 0, 0);
 }
 
-.end-menus:hover h2::after,
-.end-menus h2:focus::after{
+.end-menus p:hover::after,
+.end-menus p:focus::after{
     transform: translate3d(0, 0, 0);
 }
 .end-menu .end-menus h2 {font-size: 2vh;}
 .end-menu .end-menus p {font-size: 1.5vh;}
 .end-menu .end-menus#emb1 { top:26.5%; }
-.end-menu .end-menus#emb2 { top:42.5%;}
-.end-menu .end-menus#emb3 { top:60.5%;}
+.end-menu .end-menus#emb2 { top:45.5%;}
+.end-menu .end-menus#emb3 { top:62.5%;}
 
 #buyBtn { top:0; position: absolute; left: 36.5%; width: 4.8%; height: 8.5%; cursor: pointer;}
 
