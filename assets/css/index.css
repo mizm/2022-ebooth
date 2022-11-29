@@ -178,7 +178,7 @@ html .player .vp-controls { z-index: 10;}
 .end-menu { height:100%; right: 0px; position: absolute; top:0; display: block;}
 /* 
 .end-menu > img { height: 100%; display: block;} */
-.end-menu .end-menus { display: block; left:25%; background-color: inherit; position: absolute; top:0; width: 50%; height: 3%;}
+.end-menu .end-menus { display: block; left:22%; background-color: inherit; position: absolute; top:0; width: 50%; height: 3%;}
 .end-menus p::after {
     content: '';
     position: absolute;
@@ -197,8 +197,13 @@ html .player .vp-controls { z-index: 10;}
     transform: translate3d(0, 0.2em, 0);
 }
 
+
+
 /* Slide in */
 .end-menus p {
+    font-size: 1.6vh;
+    font-weight: 500;
+    color: #393939;
     cursor: pointer;
     clear:both;
     float:left;
@@ -215,10 +220,14 @@ html .player .vp-controls { z-index: 10;}
     transform: translate3d(0, 0, 0);
 }
 .end-menu .end-menus h2 {font-size: 2vh;}
-.end-menu .end-menus p {font-size: 1.5vh;}
 .end-menu .end-menus#emb1 { top:26.5%; }
 .end-menu .end-menus#emb2 { top:45.5%;}
 .end-menu .end-menus#emb3 { top:62.5%;}
+.end-menu img {width: 100%; top : 10%;}
+.top0 .end-menus#emb1 { top:16.5%; }
+.top0 .end-menus#emb2 { top:35.5%;}
+.top0 .end-menus#emb3 { top:52.5%;}
+.top0 img {width: 100%; top : 0%;}
 
 #buyBtn { top:0; position: absolute; left: 36.5%; width: 4.8%; height: 8.5%; cursor: pointer;}
 

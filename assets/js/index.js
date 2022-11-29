@@ -75,6 +75,7 @@ $(".items").each(function(idx,dom){
 $(".simpleBtns").on('click', function(e) {
     var tId = this.id;
     switch(tId) {
+        case "moveMain" : location.href="index.html"; break;
         case "popContentsLeft" : popArrHandler(true); break;
         case "popContentsRigth" : popArrHandler(false); break;
     }
@@ -97,7 +98,12 @@ function changePage($idx){
     $(".wrapper").scrollLeft(0);
 
     $(".end-menu").width($(".flo"+$idx).attr("endWidth") + '%');
-
+    if($idx == 12) {
+        $(".end-menu").addClass("top0");
+        console.log("top0")
+    } else {
+        $(".emd-menu").addClass("top10");
+    }
 
     setTimeout(() => $("#loading").hide(), 1000);
 }
